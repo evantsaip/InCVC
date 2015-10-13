@@ -8,6 +8,7 @@
 
 #import "CellViewController.h"
 #import "NumberCell.h"
+#import "NumberCellSecond.h"
 @interface CellViewController ()
 
 @end
@@ -49,14 +50,39 @@
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *buf = items[indexPath.row];
-    NSString *zero = cvcData[indexPath.row];
-    NumberCell *cell = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCell" forIndexPath:indexPath];
-    NumberCell *cellx = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCellx" forIndexPath:indexPath];
-//    [cellx LoadCell:zero];
+    NumberCell *cell;
     
-//    [cell LoadCell:zero];
-    [cell LoadCell:buf];
+
+    switch ([indexPath row]) {
+        case 0:
+            cell = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCell" forIndexPath:indexPath];
+            [cell LoadCell:buf];
+            break;
+        
+        case 1:
+            cell = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCellx" forIndexPath:indexPath];
+            [cell LoadCell:buf];
+            break;
+        default:
+            break;
+    }
+    
     return cell;
+    
+//    if ([indexPath row ] == 0  ) {
+//        NSString *buf = items[indexPath.row];
+//        NumberCell *cell = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCell" forIndexPath:indexPath];
+//        [cell LoadCell:buf];
+//        return cell;
+//    }
+//    else{
+//    
+//    NSString *zero = cvcData[indexPath.row];
+//    NumberCell *cellx = (NumberCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"numberCellx" forIndexPath:indexPath];
+//    [cellx LoadCell:zero];
+//    NSLog(@"show %@",indexPath);
+//    [cellx LoadCell:zero];
+//    return cellx;
 }
 /*
 #pragma mark - Navigation

@@ -17,7 +17,7 @@
 //  Copyright (c) 2015年 Evan. All rights reserved.
 //
 
-- (void)LoaCell:(NSString *)DuplicateNumber {
+- (void)LoadCell:(NSString *)DuplicateNumber {
     [textNumber2 setText:DuplicateNumber];
     items22 = [[NSMutableArray alloc]init];
     //    [items2 addObject:@"1"];
@@ -37,22 +37,22 @@
     [itemtable22 reloadData];
     ///clsFeedItem below
     clsFeedItem2 *item_1 = [[clsFeedItem2 alloc]init];
-    [item_1 setImagePath:@"movie1.png"];
+    [item_1 setImagePath:@"movie3.png"];
     [item_1 setText:@"some text 1111"];
     [items22 addObject:item_1];
     
     clsFeedItem2 *item_2 = [[clsFeedItem2 alloc]init];
-    [item_2 setImagePath:@"movie2.png"];
+    [item_2 setImagePath:@"movie4.png"];
     [item_2 setText:@"some text 1"];
     [items22 addObject:item_2];
     
     clsFeedItem2 *item_3 = [[clsFeedItem2 alloc]init];
-    [item_3 setImagePath:@"movie3.png"];
+    [item_3 setImagePath:@"movie5.png"];
     [item_3 setText:@"some text 1"];
     [items22 addObject:item_3];
     
     clsFeedItem2 *item_4 = [[clsFeedItem2 alloc]init];
-    [item_4 setImagePath:@"movie4.png"];
+    [item_4 setImagePath:@"movie6.png"];
     [item_4 setText:@"some text 1"];
     [items22 addObject:item_4];
     
